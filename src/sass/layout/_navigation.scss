@@ -1,0 +1,235 @@
+@use "../abstracts/" as *;
+
+.nav {
+	&__primary {
+		position: relative;
+		display: block;
+		--gap: clamp(1rem, 5vw, 2rem);
+		margin: 0;
+		padding: 0;
+		font-weight: 700;
+	}
+
+	&__logo {
+		font-size: rem(40);
+		font-weight: 700;
+	}
+
+	&__listItem {
+		a.active {
+			color: $clr-blue;
+			@include breakpointsUp(large) {
+				&::after {
+					content: "";
+					cursor: pointer;
+					position: absolute;
+					bottom: -125%;
+					z-index: 100;
+					left: 0;
+					width: 100%;
+					height: 5px;
+					background: $clr-blue;
+				}
+			}
+		}
+	}
+
+	&__link {
+		color: $clr-dark;
+		font-size: rem(20);
+		transition: color 0.3s ease-in-out;
+
+		&:hover,
+		&:focus {
+			color: $clr-blue;
+		}
+
+		@include breakpointsUp(large) {
+			&::after {
+				content: "";
+				cursor: pointer;
+				position: absolute;
+				bottom: -120%;
+				z-index: 100;
+				left: 50%;
+				width: 0;
+				height: 5px;
+				background: $clr-blue;
+				transition: all 0.4s ease-in-out;
+			}
+
+			&:hover,
+			&:focus,
+			&:hover::after,
+			&:focus::after {
+				display: block;
+				color: $clr-blue;
+				left: 0;
+				width: 100%;
+			}
+		}
+	}
+
+	&__dropDown {
+		display: none;
+	}
+
+	&__listItem {
+		position: relative;
+
+		&.open .nav__dropDown {
+			z-index: 2000;
+			display: block;
+			border: 2px solid $clr-light;
+			cursor: pointer;
+			position: absolute;
+			left: -20%;
+			top: 210%;
+			background-color: $clr-white;
+			border-radius: 10px;
+			box-shadow: 0px em(8) em(16) 0 rgba(0, 0, 0, 0.2);
+
+			ul {
+				display: block;
+				margin: em(16) 0;
+
+				li {
+					width: rem(150);
+					margin-bottom: 0.5rem;
+
+					&.active > a {
+						color: $clr-white;
+						background-color: $clr-blue;
+					}
+
+					a {
+						display: block;
+						font-size: rem(18);
+						color: $clr-gray;
+						font-weight: 400;
+						padding: 0 1rem;
+
+						&:hover {
+							background-color: $clr-light;
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@include breakpointsDown(medium) {
+		&__logo {
+			margin-top: rem(16);
+		}
+	}
+
+	@include breakpointsDown(large) {
+		&__primary {
+			display: flex;
+			flex-direction: column;
+			padding: min(20rem, 15vh) 2rem;
+			z-index: -1000;
+			position: fixed;
+			inset: 0% 0% 0% 50%;
+			transform: translateX(100%);
+			transition: transform 0.5s ease-in-out;
+			background-color: $clr-light;
+			box-shadow: 0px em(8) em(16) 0 rgba(0, 0, 0, 0.2);
+
+			&[displayMobileNav="true"] {
+				transform: translateX(0);
+			}
+		}
+
+		&__listItem {
+			margin-top: 0.5rem;
+			position: relative;
+			transform: translateX(100vw);
+			transition: transform 0.75s ease-in-out;
+
+			&[listItem="true"] {
+				transform: translateX(0);
+			}
+			&.open .nav__dropDown {
+				z-index: 500;
+				display: block;
+				border: 2px solid $clr-light;
+				cursor: pointer;
+				position: absolute;
+				left: -10%;
+				top: 100%;
+				background-color: $clr-white;
+				border-radius: 10px;
+				box-shadow: 0px em(8) em(16) 0 rgba(0, 0, 0, 0.2);
+			}
+		}
+	}
+}
+
+@for $i from 1 through 6 {
+	.nav__listItem:nth-child(#{$i}) {
+		transition-delay: ($i * 0.1s) + 0.2s;
+	}
+}
+
+.mobileNav {
+	visibility: hidden;
+
+	@include breakpointsDown(large) {
+		visibility: visible;
+		margin-top: 1rem;
+		position: absolute;
+		z-index: 10000;
+		right: 1rem;
+		top: 1rem;
+		height: 20px;
+		width: 28px;
+		cursor: pointer;
+		transition: all 0.5s ease-in-out;
+
+		&__burger {
+			position: absolute;
+			top: 0.5rem;
+			width: 28px;
+			height: 3px;
+			background: $clr-dark;
+			transition: all 0.5s ease-in-out;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: -8px;
+				width: 28px;
+				height: 3px;
+				background: $clr-dark;
+				transition: all 0.5s ease-in-out;
+			}
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: 8px;
+				width: 20px;
+				height: 3px;
+				background: $clr-dark;
+				transition: all 0.5s ease-in-out;
+			}
+
+			&[aria-expanded="true"] {
+				transform: rotate(720deg);
+				background-color: transparent;
+
+				&::before {
+					transform: translate(5px, 8px) rotate(45deg);
+				}
+
+				&::after {
+					transform: translate(5px, -8px) rotate(-45deg);
+					width: 28px;
+				}
+			}
+		}
+	}
+}

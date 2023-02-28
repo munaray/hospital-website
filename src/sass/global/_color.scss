@@ -1,0 +1,43 @@
+@use "../abstracts/" as a;
+
+.bg-blue {
+	background-color: a.$clr-blue;
+}
+.bg-light {
+	background-color: a.$clr-light;
+}
+.bg-white {
+	background-color: a.$clr-white;
+}
+
+.bg-gray {
+	background-color: a.$clr-gray;
+}
+
+.bg-dark {
+	background-color: a.$clr-dark;
+}
+
+.bg-transparent {
+	background-color: transparent;
+}
+
+.text-dark {
+	color: a.$clr-dark;
+}
+
+.text-light {
+	color: a.$clr-light;
+}
+
+.text-white {
+	color: a.$clr-white;
+}
+
+.text-gray {
+	color: a.$clr-gray;
+}
+
+.text-blue {
+	color: a.$clr-blue;
+}

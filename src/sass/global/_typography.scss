@@ -1,0 +1,67 @@
+@use "../abstracts" as *;
+
+.ff-sansCond {
+	font-family: $ff-sanSerif;
+}
+
+.mainHeading {
+	text-transform: capitalize;
+	color: $clr-white;
+	font-size: calc(rem(26) + 4.5vw);
+	max-width: 18ch;
+	padding: 0;
+	margin-inline: auto;
+
+	@include breakpointsUp(medium) {
+		max-width: 20ch;
+	}
+}
+
+.mainHeading2 {
+	text-transform: capitalize;
+	color: $clr-dark;
+	font-size: calc(1.45rem + 2.7vw);
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.labelHeading4 {
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: calc(1.275rem + 0.3vw);
+	line-height: 1.2;
+	color: $clr-blue;
+	font-weight: 700;
+	margin-bottom: em(8);
+	border-bottom: 5px solid hsl(210, 14%, 89%);
+}
+
+.labelHeading5 {
+	text-transform: uppercase;
+	display: inline-block;
+	font-size: rem(20);
+	font-weight: 700;
+	line-height: 1.2;
+	margin-top: 0;
+	margin-bottom: em(8);
+	border-bottom: 5px solid hsl(210, 14%, 89%);
+}
+
+.labelHeading6 {
+	color: $clr-dark;
+	line-height: 1.2;
+	font-weight: 700;
+	font-size: 1rem;
+
+	span {
+		font-size: 0.875em;
+	}
+}
+
+.formHeading {
+	font-size: calc(1.375rem + 1.5vw);
+	color: $clr-dark;
+	text-transform: capitalize;
+	margin-block: 0.675em;
+	font-weight: 700;
+}

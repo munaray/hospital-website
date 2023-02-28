@@ -1,0 +1,30 @@
+@use "function" as f;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
+
+$ff-sanSerif: "Roboto Condensed", sans-serif;
+
+$clr-white: hsl(0 0% 100%);
+$clr-light: hsl(204, 45%, 96%);
+$clr-gray: hsl(218, 12%, 57%);
+$clr-dark: hsl(224, 45%, 21%);
+$clr-blue: hsl(187, 84%, 47%);
+
+$letterSpacing1: 4.75px;
+$letterSpacing2: 2.7px;
+$letterSpacing3: 2.35px;
+
+//break-points
+
+$breakpointsUp: (
+	"small": f.em(576),
+	"medium": f.em(768),
+	"large": f.em(992),
+	"xlarge": f.em(1200),
+);
+
+$breakpointsDown: (
+	"small": f.em(575.98),
+	"medium": f.em(767.98),
+	"large": f.em(991.98),
+	"xlarge": f.em(1199.98),
+);

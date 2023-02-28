@@ -1,0 +1,129 @@
+@use "../abstracts" as *;
+
+.bioInfo {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-items: center;
+
+	@include breakpointsUp(small) {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+.service__info {
+	display: grid;
+
+	& > * {
+		margin-block: 2rem;
+	}
+
+	@include breakpointsUp(medium) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@include breakpointsUp(large) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+.appointment__input {
+	@include breakpointsUp(medium) {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+
+		input {
+			height: 60px;
+		}
+	}
+}
+.gridWrapper {
+	display: grid;
+
+	@include breakpointsUp(large) {
+		&__hero {
+			justify-items: start;
+			align-items: start;
+			padding-left: 6rem;
+			grid-template-columns: 1.5fr 1fr;
+			grid-template-areas:
+				". label image"
+				". heading image"
+				". btn image";
+
+			& > .labeHeading5 {
+				grid-area: label;
+			}
+
+			& > .mainHeading {
+				grid-area: heading;
+			}
+
+			& > .btn {
+				grid-area: btn;
+			}
+
+			& > img {
+				grid-area: image;
+			}
+		}
+
+		&__about {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-areas:
+				"image label"
+				"image heading"
+				"image text"
+				"image bioInfo";
+			& > .about__image {
+				grid-area: image;
+			}
+
+			& > .labeHeading5 {
+				grid-area: label;
+			}
+
+			& > .mainHeading2 {
+				grid-area: heading;
+			}
+
+			& > p {
+				grid-area: text;
+			}
+
+			& > .bioInfo {
+				grid-area: bioInfo;
+			}
+		}
+
+		&__appointment {
+			max-width: 80rem;
+			grid-template-columns: minmax(0, 40rem) minmax(0, 40rem);
+			align-self: start;
+			grid-template-areas:
+				"label form"
+				"heading form"
+				"text form"
+				"btn form";
+
+			& > .labeHeading5 {
+				grid-area: label;
+			}
+
+			& > .mainHeading2 {
+				grid-area: heading;
+			}
+
+			& > .p {
+				grid-area: text;
+			}
+
+			& > .btn {
+				grid-area: btn;
+			}
+
+			& > .appointment__form {
+				grid-area: form;
+			}
+		}
+	}
+}

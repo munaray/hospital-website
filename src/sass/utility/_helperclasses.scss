@@ -1,0 +1,58 @@
+@use "../abstracts" as a;
+
+.flex {
+	display: flex;
+	gap: var(--gap, a.rem(16));
+}
+
+.grid {
+	display: grid;
+	gap: var(--gap, a.rem(16));
+}
+
+//Spacing * + * can also be written as :where(not:(:first-child))
+.flow {
+	& > * + * {
+		margin-top: var(--flowSpace, a.rem(16));
+	}
+
+	&__column > * + * {
+		margin-left: var(--columnSpace, a.rem(16));
+	}
+}
+
+.hidden {
+	display: none;
+}
+
+.dBlock {
+	display: block;
+}
+
+.stickyTop {
+	position: sticky;
+	top: 0;
+	z-index: 1020;
+}
+
+.container {
+	padding-inline: a.em(32);
+	max-width: a.rem(1280);
+	margin-inline: auto;
+}
+
+.srOnly {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+.upperCase {
+	text-transform: uppercase;
+}

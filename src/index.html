@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/Icons/all.min.css">
+    <link rel="stylesheet" href="assets/Icons/fontawesome.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css"/>
+    <script defer src="script/main.js"></script>
+    <title>Munaray Hospital</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="primaryHeader stickyTop">
+       <!-- Logo -->
+       <h1 class="nav__logo text-blue">Klinik</h1>
+
+      <!-- Mobile nav toggle -->
+      <div class="mobileNav" aria-controls="nav__primary">
+        <span class="mobileNav__burger" aria-expanded="false"></span>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="nav">
+        <ul id="nav__primary" displayMobileNav="false" class="nav__primary flex">
+          <li class="nav__listItem" listItem="false"><a class="nav__link" href="#home">Home</a></li>
+          <li class="nav__listItem" listItem="false"><a class="nav__link" href="#about">About</a></li>
+          <li class="nav__listItem" listItem="false"><a class="nav__link" href="#service">Service</a></li>
+          <li class="nav__listItem" listItem="false"><a class="nav__link" href="">Pricing</a></li>
+          <li class="nav__listItem" listItem="false">
+            <a class="nav__link page" href="#">Pages<i class="fas fa-caret-down"></i></a>
+            <figure class="nav__dropDown">
+              <ul>
+                <li class="nav__dropDownItem"><a href="#">Blog Grid</a></li>
+                <li class="nav__dropDownItem"><a href="#">Blog Detail</a></li>
+                <li class="nav__dropDownItem"><a href="#">The Team</a></li>
+                <li class="nav__dropDownItem"><a href="#">Testimonial</a></li>
+                <li class="nav__dropDownItem"><a href="#appointment">Appointment</a></li>
+                <li class="nav__dropDownItem"><a href="#">Search</a></li>
+              </ul>
+            </figure>
+          </li>
+          <li class="nav__listItem" listItem="false"><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="hero gridWrapper gridWrapper__hero flow">
+        <article class="flow">
+          <div class="heading">
+            <h5 class="labelHeading5 text-blue">welcome to klinik</h5>
+            <h1 class="mainHeading">best healthcare solution in your city</h1>
+          </div>
+
+          <div class="btn">
+            <button class="btn-light btn__link"><a href="">Find Doctor</a></button>
+            <button class="btn-light btn__link"><a href="">Appointment</a></button>
+          </div>
+        </article>
+
+        <figure class="sideImg">
+          <img src="assets/Img/hero-section-img.png" alt="">
+        </figure>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about flow gridWrapper gridWrapper__about">
+        <picture class="about__image">
+          <source media="(min-width: 992px)" srcset="assets/Img/aboutLandscape.jpg">
+          <img src="assets/Img/about.jpg" alt="doctor with kid">
+        </picture>
+
+        <article class="articleInfo flow">
+          <div>
+            <h5 class="labelHeading5 text-blue">about us</h5>
+            <h1 class="mainHeading2">best medical care for your family</h1>
+          </div>
+
+          <p>Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod, dolores takimata consetetur invidunt magna dolores aliquyam dolores dolore. Amet erat amet et magna</p>
+
+          <figure class="bioInfo">
+            <div class="about__infoBg flow">
+              <i class="fas fa-user-doctor fa-3x text-blue"></i>
+              <h6 class="labelHeading6">Qualified <span class="dBlock text-blue">Doctors</span></h6>
+            </div>
+
+            <div class="about__infoBg flow">
+              <i class="fas fa-bed-pulse fa-3x text-blue"></i>
+              <h6 class="labelHeading6">Emergency <span class="dBlock text-blue">Services</span></h6>
+            </div>
+
+            <div class="about__infoBg flow">
+              <i class="fas fa-microscope fa-3x text-blue"></i>
+              <h6 class="labelHeading6">Accurate <span class="dBlock text-blue">Testing</span></h6>
+            </div>
+
+            <div class="about__infoBg flow">
+              <i class="fas fa-truck-medical fa-3x text-blue"></i>
+              <h6 class="labelHeading6">Free <span class="dBlock text-blue">Ambulance</span></h6>
+            </div>
+          </figure>
+        </article>
+      </section>
+
+      <!-- Services Section -->
+      <section id="service" class="service flow">
+        <div>
+          <h5 class="labelHeading5 text-blue">services</h5>
+          <h1 class="mainHeading2">excellent medical services</h1>
+        </div>
+
+        <article class="flow service__info">
+          <figure class="service__container flow">
+              <div class="service__icon">
+                <i class="fas fa-user-doctor fa-2x text-white"></i>
+              </div>
+              <h4 class="labelHeading4 text-dark">Emergency Care</h4>
+              <p>Kasd dolor no lorem nonumy sit labore tempor at justo rebumrebum stet, justo elitr dolor amet sit</p>
+              <a href=""><i class="fas fa-arrow-right"></i></a>
+          </figure>
+
+          <figure class="service__container flow">
+              <div class="service__icon">
+                <i class="fas fa-bed-pulse fa-2x text-white"></i>
+              </div>
+              <h4 class="labelHeading4 text-dark">Operation & Surgery</h4>
+              <p>Kasd dolor no lorem nonumy sit labore tempor at justo rebumrebum stet, justo elitr dolor amet sit</p>
+              <a href=""><i class="fas fa-arrow-right"></i></a>
+          </figure>
+
+          <figure class="service__container flow">
+              <div class="service__icon">
+                <i class="fas fa-stethoscope fa-2x text-white"></i>
+              </div>
+              <h4 class="labelHeading4 text-dark">Outdoor Checkup</h4>
+              <p>Kasd dolor no lorem nonumy sit labore tempor at justo rebumrebum stet, justo elitr dolor amet sit</p>
+              <a href=""><i class="fas fa-arrow-right"></i></a>
+          </figure>
+
+          <figure class="service__container flow">
+              <div class="service__icon">
+                <i class="fas fa-truck-medical fa-2x text-white"></i>
+              </div>
+              <h4 class="labelHeading4 text-dark">Ambulance Service</h4>
+              <p>Kasd dolor no lorem nonumy sit labore tempor at justo rebumrebum stet, justo elitr dolor amet sit</p>
+              <a href=""><i class="fas fa-arrow-right"></i></a>
+          </figure>
+
+          <figure class="service__container flow">
+              <div class="service__icon">
+                <i class="fas fa-pills fa-2x text-white"></i>
+              </div>
+              <h4 class="labelHeading4 text-dark">Medicine & Pharmacy</h4>
+              <p>Kasd dolor no lorem nonumy sit labore tempor at justo rebumrebum stet, justo elitr dolor amet sit</p>
+              <a href=""><i class="fas fa-arrow-right"></i></a>
+          </figure>
+
+          <figure class="service__container flow">
+              <div class="service__icon">
+                <i class="fas fa-microscope fa-2x text-white"></i>
+              </div>
+              <h4 class="labelHeading4 text-dark">Blood Testing</h4>
+              <p>Kasd dolor no lorem nonumy sit labore tempor at justo rebumrebum stet, justo elitr dolor amet sit</p>
+              <a href=""><i class="fas fa-arrow-right"></i></a>
+          </figure>
+        </article>
+      </section>
+
+      <!-- Pricing Section -->
+      <section id="pricing" class="pricing">
+
+      </section>
+
+      <!-- Appointment Section -->
+      <section class="appointment flow" id="appointment">
+        <section class="appointment__container gridWrapper gridWrapper__appointment flow flow__column">
+
+          <article class="text flow">
+            <div>
+              <h5 class="labelHeading5 text-white">appointment</h5>
+              <h1 class="mainHeading2">make an appointment for your family</h1>
+            </div>
+
+            <p class="text-white p">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit. Sea dolore sanctus sed et. Takimata takimata sanctus sed.</p>
+            <div class="flex btn">
+              <button class="btn-dark btn__link"><a href="">Find Doctor</a></button>
+              <button class="btn-dark btn__link"><a href="">Appointment</a></button>
+            </div>
+          </article>
+
+
+
+          <article class="appointment__form">
+            <h1 class="formHeading">book an appointment</h1>
+            <form action="#">
+              <figure class="appointment__input">
+                <p class="inputBox">
+                  <select class="selectForm">
+                    <option value="">Choose Department</option>
+                    <option value="department1">Department 1</option>
+                    <option value="department2">Department 2</option>
+                    <option value="department3">Department 3</option>
+                    <option value="department4">Department 4</option>
+                    <option value="department5">Department 5</option>
+                  </select>
+                </p>
+
+                <p class="inputBox">
+                  <select class="selectForm">
+                    <option value="">Select Doctor</option>
+                    <option value="doctor1">Doctor 1</option>
+                    <option value="doctor2">Doctor 2</option>
+                    <option value="doctor3">Doctor 3</option>
+                    <option value="doctor4">Doctor 4</option>
+                    <option value="doctor5">Doctor 5</option>
+                  </select>
+                </p>
+
+                <p class="inputBox">
+                  <input type="text" name="fullName" id="fullName" placeholder="Your Name">
+                </p>
+
+                <p class="inputBox">
+                  <input type="text" name="emaill" id="emaill" placeholder="Your Email">
+                </p>
+
+                <p class="inputBox">
+                  <input type="number" name="date" id="date" placeholder="Date">
+                </p>
+
+                <p class="inputBox">
+                  <input type="number" name="time" id="time" placeholder="Time">
+                </p>
+              </figure>
+
+              <button type="submit">Make An Appointment</button>
+            </form>
+          </article>
+        </section>
+      </section>
+
+      <!-- Our Doctors Section -->
+      <section>
+
+      </section>
+
+       <!-- Find A Doctor Section -->
+       <section>
+
+      </section>
+
+       <!-- Testimonial Section -->
+       <section>
+
+      </section>
+
+       <!-- Blog Post Section -->
+       <section>
+
+      </section>
+    </main>
+
+    <footer class="contact flow" id="contact">
+      <div class="flow">
+        <h4 class="labelHeading4">get in touch</h4>
+        <p>No dolore ipsum accusam no lorem. Invidunt sed clita kasd clita et et dolor sed dolor</p>
+
+        <figure>
+          <p><i class="fas fa-location-dot text-blue"></i>Ahmadu Bello, Zaria</p>
+          <p><i class="fas fa-envelope text-blue"></i> info@example.com</p>
+          <p><i class="fas fa-phone text-blue"></i> 07060627530</p>
+        </figure>
+      </div>
+
+      <div>
+        <h4 class="labelHeading4">Quick links</h4>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">About Us</a></li>
+          <li><a href="">Our Services</a></li>
+          <li><a href="">Meet The Team</a></li>
+          <li><a href="">Latest Blog</a></li>
+          <li><a href="">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="labelHeading4">Popular links</h4>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">About Us</a></li>
+          <li><a href="">Our Services</a></li>
+          <li><a href="">Meet The Team</a></li>
+          <li><a href="">Latest Blog</a></li>
+          <li><a href="">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="labelHeading4">newsletter</h4>
+
+        <form action="#">
+          <input type="text" name="yourEmail" id="yourEmail">
+          <input type="submit" value="Sign Up">
+        </form>
+
+        <figure>
+          <h4 class="labelHeading4">follow us</h4>
+
+          <div class="flex socialIcon">
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-facebook"></i></a>
+            <a href=""><i class="fab fa-linkedin"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+          </div>
+        </figure>
+      </div>
+
+      <p>&copy; <span class="text-blue">Munaray</span> All Rights Reserved</p>
+      <div>
+        <a href="/"><i class="fas fa-arrow-up"></i></a>
+      </div>
+    </footer>
+
+  </body>
+</html>

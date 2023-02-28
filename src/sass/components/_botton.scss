@@ -1,0 +1,61 @@
+@use "../abstracts" as *;
+.btn {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+
+	&__link {
+		border: none;
+		outline: none;
+		border-radius: rem(800);
+		padding: em(16) em(48);
+		font-weight: 700;
+		background: transparent;
+		line-height: 1.5;
+		cursor: pointer;
+		text-align: center;
+	}
+
+	@include breakpointsUp(large) {
+		justify-content: flex-start;
+	}
+}
+
+.btn-dark {
+	outline: 1px solid $clr-dark;
+	transition: color 0.7s ease-in-out;
+	transition: background-color 0.5s ease-in-out;
+
+	a {
+		color: $clr-dark;
+	}
+
+	&:hover,
+	&.active,
+	&:focus {
+		background-color: $clr-dark;
+
+		a {
+			color: $clr-white;
+		}
+	}
+}
+
+.btn-light {
+	outline: 1px solid $clr-white;
+	transition: all 0.5s ease-in-out;
+
+	a {
+		color: $clr-white;
+	}
+
+	&:hover,
+	&:focus,
+	&.active {
+		background-color: $clr-white;
+
+		a {
+			color: $clr-dark;
+		}
+	}
+}
